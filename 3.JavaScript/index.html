@@ -44,12 +44,14 @@
     var randTime = Math.random();
     randTime *= 5000;
 
-    var randP = randTime * 500;
+    var randPLeft = Math.floor(Math.random() * (1000 - 1 + 1)) + 1;
+    var randPTop = Math.floor(Math.random() * (500 - 1 + 1)) + 1;
     var myBox = document.getElementById("box");
 
-    myBox.style.position = "absolute";
-    myBox.style.left = Math.round(randP);
-    myBox.style.top = Math.round(randP);
+    myBox.style.position = "relative";
+    myBox.style.left = Math.round(randPLeft) + "px";
+    myBox.style.top = Math.round(randPTop) + "px";
+
 
     setTimeout(function() {
       myBox.style.display="block";
