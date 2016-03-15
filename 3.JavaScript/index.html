@@ -18,9 +18,32 @@
 
     }
 
+    body {
+
+      background-color: black;
+
+    }
+
     #time {
       font-family: serif;
       font-weight: bold;
+      
+    }
+
+    #yourTime {
+
+      font-family: serif;
+      font-size: 2em;
+      text-align: center;
+      color: white;
+
+    }
+
+    #bestTime {
+      font-family: serif;
+      font-size: 2em;
+      text-align: center;
+      color: white;
     }
   </style>
 
@@ -29,7 +52,8 @@
 
 <body>
 
-  <p>Your Time: <span id="time"></span></p>
+  <p id="yourTime">Your Time: <span id="time"></span></p>
+  <p id="bestTime">Best Time: <span id="bTime"></span></p>
 
   <div id="box"></div>
 
@@ -38,19 +62,44 @@
   var clickedTime;
   var createdTime;
   var reactionTime;
+  var currentBestTime;
+
+  function  getRandomColor() {
+
+    var letters = "0123456789ABCDEF".split("");
+    var color = "#";
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
 
   function randDisplay() {
 
     var randTime = Math.random();
-    randTime *= 5000;
+    randTime *= 2000;
 
     var randPLeft = Math.floor(Math.random() * (1000 - 1 + 1)) + 1;
     var randPTop = Math.floor(Math.random() * (500 - 1 + 1)) + 1;
+    var randShape = Math.floor(Math.random() * 2);
+
+    //console.log(randShape);
     var myBox = document.getElementById("box");
+
+    myBox.style.backgroundColor = getRandomColor();
 
     myBox.style.position = "relative";
     myBox.style.left = Math.round(randPLeft) + "px";
     myBox.style.top = Math.round(randPTop) + "px";
+
+    if (randShape == 0) {
+      
+      myBox.style.borderRadius = 0;
+      
+    } else if (randShape == 1) {
+
+      myBox.style.borderRadius = "100px";
+    }
 
 
     setTimeout(function() {
@@ -58,14 +107,27 @@
       createdTime = Date.now();
     },randTime);
 
+    
+
   }
 
   document.getElementById("box").onclick=function () {
     clickedTime = Date.now();
     reactionTime = (clickedTime - createdTime)/1000;
+    currentBestTime = 10;
     this.style.display="none";
     randDisplay();
     document.getElementById("time").innerHTML=reactionTime;
+    //document.getElementById("bTime").innerHTML=currentBestTime;
+
+    if(reactionTime < currentBestTime) {
+
+      document.getElementById("bTime").innerHTML=reactionTime;
+
+    } else {
+      document.getElementById("bTime").innerHTML=10;
+    }
+  
   }
 
   randDisplay();
