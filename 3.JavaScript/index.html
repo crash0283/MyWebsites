@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <title>
+    Learning JavaScript
+  </title>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    #box {
+      background-color: red;
+      height: 200px;
+      width: 200px;
+      display: none;
+
+    }
+
+    #time {
+      font-family: serif;
+      font-weight: bold;
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+  <p>Your Time: <span id="time"></span></p>
+
+  <div id="box"></div>
+
+<script type="text/javascript">
+
+  var clickedTime;
+  var createdTime;
+  var reactionTime;
+
+  function randDisplay() {
+
+    var randTime = Math.random();
+    randTime *= 5000;
+
+    var randP = randTime * 500;
+    var myBox = document.getElementById("box");
+
+    myBox.style.position = "absolute";
+    myBox.style.left = Math.round(randP);
+    myBox.style.top = Math.round(randP);
+
+    setTimeout(function() {
+      myBox.style.display="block";
+      createdTime = Date.now();
+    },randTime);
+
+  }
+
+  document.getElementById("box").onclick=function () {
+    clickedTime = Date.now();
+    reactionTime = (clickedTime - createdTime)/1000;
+    this.style.display="none";
+    randDisplay();
+    document.getElementById("time").innerHTML=reactionTime;
+  }
+
+  randDisplay();
+
+
+</script>
+</body>
+</html>
