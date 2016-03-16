@@ -53,7 +53,7 @@
 <body>
 
   <p id="yourTime">Your Time: <span id="time"></span></p>
-  <p id="bestTime">Best Time: <span id="bTime"></span></p>
+  <p id="bestTime">Best Time: <span id="bTime">10</span></p>
 
   <div id="box"></div>
 
@@ -63,6 +63,7 @@
   var createdTime;
   var reactionTime;
   var currentBestTime;
+
 
   function  getRandomColor() {
 
@@ -83,7 +84,8 @@
     var randPTop = Math.floor(Math.random() * (500 - 1 + 1)) + 1;
     var randShape = Math.floor(Math.random() * 2);
 
-    //console.log(randShape);
+    currentBestTime = document.getElementById("bTime").innerHTML;
+
     var myBox = document.getElementById("box");
 
     myBox.style.backgroundColor = getRandomColor();
@@ -106,26 +108,19 @@
       myBox.style.display="block";
       createdTime = Date.now();
     },randTime);
-
-    
+ 
 
   }
 
   document.getElementById("box").onclick=function () {
     clickedTime = Date.now();
     reactionTime = (clickedTime - createdTime)/1000;
-    currentBestTime = 10;
     this.style.display="none";
     randDisplay();
     document.getElementById("time").innerHTML=reactionTime;
-    //document.getElementById("bTime").innerHTML=currentBestTime;
 
     if(reactionTime < currentBestTime) {
-
       document.getElementById("bTime").innerHTML=reactionTime;
-
-    } else {
-      document.getElementById("bTime").innerHTML=10;
     }
   
   }
