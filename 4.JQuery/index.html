@@ -25,23 +25,19 @@
   </head>
   <body>
 
-    <div id="greenCircle"></div>
-    <div class="redSquare"></div>
-    <div class="redSquare"></div>
+    <p>This will fade out!</p>
+    <button id="myButton" >Fade</button>
 
     <script type="text/javascript">
 
-      function disappear() {
-
-        $("div").click(function() {
-
-          $(this).css("display","none");
-
-        });
-
-      }
-
-      disappear();
+      $("#myButton").click(function() {
+        if ($("p").css("display") == "none") {
+          $("p").fadeIn(2000);
+        } else {
+          $("p").fadeOut(2000);
+        }
+        
+      })
 
 
     </script>
