@@ -3,7 +3,7 @@
     <title>JQuery</title>
     <meta content="">
     <style>
-      
+
       #greenCircle {
 	background-color: green;
 	width: 100px;
@@ -12,28 +12,38 @@
 
       }
 
+      .redSquare {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
 
-
+      }
     </style>
 
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   </head>
   <body>
 
     <div id="greenCircle"></div>
-    <p>This is some text!</p>
-    <iframe src="http://www.cnn.com"></iframe>
+    <div class="redSquare"></div>
+    <div class="redSquare"></div>
 
     <script type="text/javascript">
 
-      $("#greenCircle").hover(function() {
+      function disappear() {
 
-	$("iframe").attr("src", "http://www.imdb.com");
+        $("div").click(function() {
+
+          $(this).css("display","none");
+
+        });
+
+      }
+
+      disappear();
 
 
-      });
-
-      
     </script>
 
   </body>
