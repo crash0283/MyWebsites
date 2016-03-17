@@ -12,33 +12,39 @@
 
       }
 
-      .redSquare {
-  background-color: red;
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-
-      }
+ 
     </style>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   </head>
   <body>
 
-    <p>This will fade out!</p>
-    <button id="myButton" >Fade</button>
+    <div id="greenCircle"></div>
 
     <script type="text/javascript">
 
-      $("#myButton").click(function() {
-        if ($("p").css("display") == "none") {
-          $("p").fadeIn(2000);
-        } else {
-          $("p").fadeOut(2000);
-        }
-        
-      })
+      $("#greenCircle").click(function() {
+	if($(this).css("height") == "100px") {
+	  $(this).animate({width:"400px", height:"400px", backgroundColor:"red"},2000,function() {
 
+	    $(this).css("background-color","red");
+
+	   });
+
+	} else {
+
+	  $(this).animate({
+	    width:"100px", 
+	    height:"100px"
+	   },2000,function() {
+
+	    $(this).css("background-color","green");
+
+	   });
+
+	}
+
+      });
 
     </script>
 
