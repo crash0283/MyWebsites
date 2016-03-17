@@ -2,49 +2,39 @@
   <head>
     <title>JQuery</title>
     <meta content="">
-    <style>
+    <style type="text/css">
 
-      #greenCircle {
-	background-color: green;
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
+      body {
 
+	font-family: helvetica, sans-serif;
+	font-size: 200%;
       }
 
+      input {
+
+	height: 40px;
+	padding: 5px;
+	font-size: 20px;
+	border-radius: 5px;
+	border: 1px solid grey;
+
+      }
  
     </style>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   </head>
   <body>
+  
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" placeholder="eg.yourname@gmail.com">
 
-    <div id="greenCircle"></div>
 
     <script type="text/javascript">
 
-      $("#greenCircle").click(function() {
-	if($(this).css("height") == "100px") {
-	  $(this).animate({width:"400px", height:"400px", backgroundColor:"red"},2000,function() {
 
-	    $(this).css("background-color","red");
 
-	   });
-
-	} else {
-
-	  $(this).animate({
-	    width:"100px", 
-	    height:"100px"
-	   },2000,function() {
-
-	    $(this).css("background-color","green");
-
-	   });
-
-	}
-
-      });
+      
 
     </script>
 
