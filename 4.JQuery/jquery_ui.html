@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <title>JQuery UI</title>
+    <meta content="">
+    <style type="text/css">
+
+      #draggable {
+
+	width: 150px;
+	height: 150px;
+	padding: 0.5em;
+	text-align: center;
+
+      }
+
+    #outsideBox {
+
+	width: 400px;
+	height: 400px;
+	padding: 0.1em;
+	border: 3px solid grey;
+
+      }
+
+      p {
+	margin-top: 50px;
+	font-weight: bold;
+	
+
+      }
+
+      #resizable {
+
+	width: 150px;
+	height: 150px;
+	padding: 0.5em;
+	border: 3px solid blue;
+	margin-top: 20px;
+
+      }
+
+      #resizable h3 {
+	text-align: center;
+	margin: 0;
+
+      }
+      
+ 
+    </style>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+  </head>
+  <body>
+
+    <div id="outsideBox" >
+
+      <div id="draggable" class="ui-widget-content">
+
+	<p>Drag me around</p>
+
+      </div>
+
+    </div>
+
+    <div id="resizable" >
+
+      <h3 class="ui-widget-header">Resizable!</h3>
+
+    </div>
+
+
+    <script type="text/javascript">
+
+      $(function() {
+      
+	$("#draggable").draggable({containment: "#outsideBox", scroll: false});
+
+      });
+
+      $("#resizable").resizable({
+	minHeight: 150,
+	minWidth: 150,
+
+	stop: function(event,ui) {
+
+	  alert("Hello!")
+
+	}
+
+      });
+
+    </script>
+  </body>
+</html>
