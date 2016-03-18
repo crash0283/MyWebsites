@@ -22,7 +22,7 @@
 
       }
 
-      p {
+      #draggable p {
 	margin-top: 50px;
 	font-weight: bold;
 	
@@ -44,13 +44,63 @@
 	margin: 0;
 
       }
+
+      #littleBox {
+
+	background-color: green;
+	height: 100px;
+	width: 100px;
+	margin-top: 30px;
+
+      }
+
+      #bigBox {
+
+	background-color: orange;
+	height: 400px;
+	width: 400px;
+	margin-top: 30px;
+
+      }
+
+      #bigBox p {
+
+	padding-top: 80px;
+	text-align: center;
+	font-weight: bold;
+
+      }
+
+      #littleBox p {
+
+	padding-top: 20px;
+	text-align: center;
+	font-weight: bold;
+
+      }
+
+      #accordion {
+
+	margin-top: 30px;
+
+      }
+
+      #cal {
+	float: right;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: -1550px;
+
+      }
+
       
  
     </style>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/start/jquery-ui.css">
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
@@ -73,12 +123,86 @@
 
     </div>
 
+    <div id="littleBox">
+
+      <p>Little Box</p>
+
+    </div>
+    
+    <div id="bigBox">
+
+      <p>I Accept: '#littleBox'</p>
+  
+    </div>
+
+    <div id="accordion">
+      <h3>Section 1</h3>
+      <div>
+	<p>
+	  This is the 1st section of the accordion!
+	</p>
+      </div>
+
+      <h3>Section 2</h3>
+      <div>
+	<p>
+	  This is the 2nd section of the accordion!
+	</p>
+      </div>
+
+      <h3>Section 3</h3>
+      <div>
+	<p>
+	  This is the 3rd section of the accordion!
+	</p>
+	<ul>
+	  <li>List Item 1</li>
+	  <li>List Item 2</li>
+	  <li>List Item 3</li>
+	</ul>
+      </div>
+
+      <h3>Section 4</h3>
+      <div>
+	<p>
+	  This is the 4th section of the accordion!
+	</p>
+      </div>
+    </div>
+
+    <div id="cal">
+
+      <p>Date: <input type="text" id="datepicker" ></p>
+
+    </div>
+
 
     <script type="text/javascript">
 
       $(function() {
       
 	$("#draggable").draggable({containment: "#outsideBox", scroll: false});
+
+      });
+
+      $("#littleBox").draggable();
+
+      $("#bigBox").droppable({
+
+	accept: "#littleBox",
+
+	drop: function(event,ui) {
+
+	  $(this).find("p").html("Little Box Accepted!");
+
+	},
+
+	out: function(event,ui) {
+
+	  $(this).find("p").html("I Accept: '#littleBox'");
+	
+	}
+
 
       });
 
@@ -93,6 +217,20 @@
 	}
 
       });
+
+      $(function() {
+
+	$("#accordion").accordion();
+
+
+      });
+
+      $(function() {
+
+	$("#datepicker").datepicker();
+
+      });
+
 
     </script>
   </body>
