@@ -98,9 +98,9 @@
 
     <div id="bodyContainer" >
 
-      <textarea id="htmlPanel" class="panel" ><p>Hello World!</p></textarea>
+      <textarea id="htmlPanel" class="panel" ><p id="htmlP">Hello World!</p></textarea>
       <textarea id="cssPanel" class="panel hidden" >p {color: red;}</textarea>
-      <textarea id="javascriptPanel" class="panel hidden" >alert("Hello!");</textarea>
+      <textarea id="javascriptPanel" class="panel hidden" >document.getElementById("htmlP").innerHTML="Hello Wrold!";</textarea>
 
       <iframe id="outputPanel" class="panel" ></iframe>
 
