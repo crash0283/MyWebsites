@@ -9,63 +9,149 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 
+      <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <script src="https://github.com/HubSpot/tether/blob/master/dist/js/tether.min.js"></script>
+
+
+  <style>
+
+    body {
+
+      position: relative;
+
+    }
+
+    .container {
+
+      position: relative;
+      top: 70px;
+
+    }
+  
+    .white a:hover {
+
+      background-color: white;
+
+    }
+
+   
+
+  </style>
+
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#navbar-example" data-offset="70">
 
-    <!-- jQuery first, then Bootstrap JS. -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+    <nav id="navbar-example" class="navbar navbar-dark bg-inverse navbar-fixed-top">
+      <a class="navbar-brand" href="#">ScrollSpy</a>
+      <ul class="nav nav-pills white">
+	<li class="nav-item">
+	  <a class="nav-link active" href="#link1">Link1</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link" href="#link2">Link2</a>
+	</li>
+      </ul>
+    </nav>
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" data-name="Chris">
-      Email Chris
-    </button>
+    <div class="container">
+      <div id="link1">
+	<h1>Link 1</h1>
+	  <p>
+	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nunc quam, vehicula sed ex in, laoreet aliquet eros. Sed dignissim neque at magna molestie blandit. Pellentesque non eros eget nisl mattis suscipit eu nec augue. Etiam faucibus dictum blandit. Vivamus et nulla nec turpis iaculis molestie aliquam at erat. Fusce a porta dui. Vivamus leo ex, sodales sit amet arcu a, malesuada congue tortor.
 
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" data-name="Suzanne">
-      Email Suzanne
-    </button>
+	    Cras nulla leo, aliquam sed tortor eu, sagittis facilisis mauris. Duis nec pellentesque sapien. Mauris magna mi, aliquam quis placerat at, ultrices sed est. Phasellus vehicula luctus justo, non blandit velit aliquam vitae. Vestibulum consequat massa a lobortis volutpat. Integer tortor est, hendrerit eu hendrerit non, feugiat ac augue. Aenean ante neque, dictum et sagittis in, varius dictum est. Praesent scelerisque dictum nunc, rhoncus iaculis augue. Fusce faucibus libero nec lacus interdum placerat.
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
+	    Etiam luctus, velit nec iaculis tincidunt, nisl eros luctus elit, vel tristique turpis ipsum eget risus. Fusce interdum felis a est tristique, eget gravida neque dictum. In a massa ac metus aliquam scelerisque. Nullam non nibh sit amet turpis finibus euismod non vitae nisi. Nulla ac dui consectetur, ullamcorper leo non, tincidunt velit. Duis fringilla ligula tortor, non mollis ligula suscipit sed. Fusce id leo facilisis libero porttitor pellentesque eget et justo. Cras in mi vel ex egestas rutrum.
+
+	    Nulla vestibulum erat ut nunc pulvinar ullamcorper. Etiam finibus, sem vitae commodo laoreet, neque velit sollicitudin felis, id congue nisi libero sed leo. Suspendisse vitae varius ante. Pellentesque vestibulum diam id odio venenatis dapibus. Maecenas faucibus, ante sit amet gravida porta, orci magna pellentesque odio, vel ullamcorper urna odio at ipsum. Praesent ut nibh mattis, pharetra nibh eget, pellentesque arcu. Pellentesque laoreet mi at gravida sagittis.
+
+	    Etiam rhoncus nulla massa, ac posuere libero pellentesque at. Phasellus et massa nunc. Maecenas nunc tellus, scelerisque sed tellus sed, interdum porta est. Vestibulum auctor congue nunc, a venenatis est aliquam sed. Donec eros odio, imperdiet quis vulputate eget, aliquet non libero. Sed ultricies ligula ac augue fringilla, eu vestibulum mi sagittis. Quisque enim dolor, tempor id dignissim suscipit, cursus sit amet tellus.
+	  </p>
+
+	<p>
+	  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nunc quam, vehicula sed ex in, laoreet aliquet eros. Sed dignissim neque at magna molestie blandit. Pellentesque non eros eget nisl mattis suscipit eu nec augue. Etiam faucibus dictum blandit. Vivamus et nulla nec turpis iaculis molestie aliquam at erat. Fusce a porta dui. Vivamus leo ex, sodales sit amet arcu a, malesuada congue tortor.
+
+	  Cras nulla leo, aliquam sed tortor eu, sagittis facilisis mauris. Duis nec pellentesque sapien. Mauris magna mi, aliquam quis placerat at, ultrices sed est. Phasellus vehicula luctus justo, non blandit velit aliquam vitae. Vestibulum consequat massa a lobortis volutpat. Integer tortor est, hendrerit eu hendrerit non, feugiat ac augue. Aenean ante neque, dictum et sagittis in, varius dictum est. Praesent scelerisque dictum nunc, rhoncus iaculis augue. Fusce faucibus libero nec lacus interdum placerat.
+
+	  Etiam luctus, velit nec iaculis tincidunt, nisl eros luctus elit, vel tristique turpis ipsum eget risus. Fusce interdum felis a est tristique, eget gravida neque dictum. In a massa ac metus aliquam scelerisque. Nullam non nibh sit amet turpis finibus euismod non vitae nisi. Nulla ac dui consectetur, ullamcorper leo non, tincidunt velit. Duis fringilla ligula tortor, non mollis ligula suscipit sed. Fusce id leo facilisis libero porttitor pellentesque eget et justo. Cras in mi vel ex egestas rutrum.
+
+	  Nulla vestibulum erat ut nunc pulvinar ullamcorper. Etiam finibus, sem vitae commodo laoreet, neque velit sollicitudin felis, id congue nisi libero sed leo. Suspendisse vitae varius ante. Pellentesque vestibulum diam id odio venenatis dapibus. Maecenas faucibus, ante sit amet gravida porta, orci magna pellentesque odio, vel ullamcorper urna odio at ipsum. Praesent ut nibh mattis, pharetra nibh eget, pellentesque arcu. Pellentesque laoreet mi at gravida sagittis.
+
+	  Etiam rhoncus nulla massa, ac posuere libero pellentesque at. Phasellus et massa nunc. Maecenas nunc tellus, scelerisque sed tellus sed, interdum porta est. Vestibulum auctor congue nunc, a venenatis est aliquam sed. Donec eros odio, imperdiet quis vulputate eget, aliquet non libero. Sed ultricies ligula ac augue fringilla, eu vestibulum mi sagittis. Quisque enim dolor, tempor id dignissim suscipit, cursus sit amet tellus.
+	</p>
+
+	<p>
+	  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nunc quam, vehicula sed ex in, laoreet aliquet eros. Sed dignissim neque at magna molestie blandit. Pellentesque non eros eget nisl mattis suscipit eu nec augue. Etiam faucibus dictum blandit. Vivamus et nulla nec turpis iaculis molestie aliquam at erat. Fusce a porta dui. Vivamus leo ex, sodales sit amet arcu a, malesuada congue tortor.
+
+	  Cras nulla leo, aliquam sed tortor eu, sagittis facilisis mauris. Duis nec pellentesque sapien. Mauris magna mi, aliquam quis placerat at, ultrices sed est. Phasellus vehicula luctus justo, non blandit velit aliquam vitae. Vestibulum consequat massa a lobortis volutpat. Integer tortor est, hendrerit eu hendrerit non, feugiat ac augue. Aenean ante neque, dictum et sagittis in, varius dictum est. Praesent scelerisque dictum nunc, rhoncus iaculis augue. Fusce faucibus libero nec lacus interdum placerat.
+
+	  Etiam luctus, velit nec iaculis tincidunt, nisl eros luctus elit, vel tristique turpis ipsum eget risus. Fusce interdum felis a est tristique, eget gravida neque dictum. In a massa ac metus aliquam scelerisque. Nullam non nibh sit amet turpis finibus euismod non vitae nisi. Nulla ac dui consectetur, ullamcorper leo non, tincidunt velit. Duis fringilla ligula tortor, non mollis ligula suscipit sed. Fusce id leo facilisis libero porttitor pellentesque eget et justo. Cras in mi vel ex egestas rutrum.
+
+	  Nulla vestibulum erat ut nunc pulvinar ullamcorper. Etiam finibus, sem vitae commodo laoreet, neque velit sollicitudin felis, id congue nisi libero sed leo. Suspendisse vitae varius ante. Pellentesque vestibulum diam id odio venenatis dapibus. Maecenas faucibus, ante sit amet gravida porta, orci magna pellentesque odio, vel ullamcorper urna odio at ipsum. Praesent ut nibh mattis, pharetra nibh eget, pellentesque arcu. Pellentesque laoreet mi at gravida sagittis.
+
+	  Etiam rhoncus nulla massa, ac posuere libero pellentesque at. Phasellus et massa nunc. Maecenas nunc tellus, scelerisque sed tellus sed, interdum porta est. Vestibulum auctor congue nunc, a venenatis est aliquam sed. Donec eros odio, imperdiet quis vulputate eget, aliquet non libero. Sed ultricies ligula ac augue fringilla, eu vestibulum mi sagittis. Quisque enim dolor, tempor id dignissim suscipit, cursus sit amet tellus.
+	</p>
+
+      </div>
+
+      <div id="link2">
+	<h1>Link 2</h1>
+	<p>
+	  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nunc quam, vehicula sed ex in, laoreet aliquet eros. Sed dignissim neque at magna molestie blandit. Pellentesque non eros eget nisl mattis suscipit eu nec augue. Etiam faucibus dictum blandit. Vivamus et nulla nec turpis iaculis molestie aliquam at erat. Fusce a porta dui. Vivamus leo ex, sodales sit amet arcu a, malesuada congue tortor.
+
+	  Cras nulla leo, aliquam sed tortor eu, sagittis facilisis mauris. Duis nec pellentesque sapien. Mauris magna mi, aliquam quis placerat at, ultrices sed est. Phasellus vehicula luctus justo, non blandit velit aliquam vitae. Vestibulum consequat massa a lobortis volutpat. Integer tortor est, hendrerit eu hendrerit non, feugiat ac augue. Aenean ante neque, dictum et sagittis in, varius dictum est. Praesent scelerisque dictum nunc, rhoncus iaculis augue. Fusce faucibus libero nec lacus interdum placerat.
+
+	  Etiam luctus, velit nec iaculis tincidunt, nisl eros luctus elit, vel tristique turpis ipsum eget risus. Fusce interdum felis a est tristique, eget gravida neque dictum. In a massa ac metus aliquam scelerisque. Nullam non nibh sit amet turpis finibus euismod non vitae nisi. Nulla ac dui consectetur, ullamcorper leo non, tincidunt velit. Duis fringilla ligula tortor, non mollis ligula suscipit sed. Fusce id leo facilisis libero porttitor pellentesque eget et justo. Cras in mi vel ex egestas rutrum.
+
+	  Nulla vestibulum erat ut nunc pulvinar ullamcorper. Etiam finibus, sem vitae commodo laoreet, neque velit sollicitudin felis, id congue nisi libero sed leo. Suspendisse vitae varius ante. Pellentesque vestibulum diam id odio venenatis dapibus. Maecenas faucibus, ante sit amet gravida porta, orci magna pellentesque odio, vel ullamcorper urna odio at ipsum. Praesent ut nibh mattis, pharetra nibh eget, pellentesque arcu. Pellentesque laoreet mi at gravida sagittis.
+
+	  Etiam rhoncus nulla massa, ac posuere libero pellentesque at. Phasellus et massa nunc. Maecenas nunc tellus, scelerisque sed tellus sed, interdum porta est. Vestibulum auctor congue nunc, a venenatis est aliquam sed. Donec eros odio, imperdiet quis vulputate eget, aliquet non libero. Sed ultricies ligula ac augue fringilla, eu vestibulum mi sagittis. Quisque enim dolor, tempor id dignissim suscipit, cursus sit amet tellus.
+	</p>
+
+	<p>
+	  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nunc quam, vehicula sed ex in, laoreet aliquet eros. Sed dignissim neque at magna molestie blandit. Pellentesque non eros eget nisl mattis suscipit eu nec augue. Etiam faucibus dictum blandit. Vivamus et nulla nec turpis iaculis molestie aliquam at erat. Fusce a porta dui. Vivamus leo ex, sodales sit amet arcu a, malesuada congue tortor.
+
+	  Cras nulla leo, aliquam sed tortor eu, sagittis facilisis mauris. Duis nec pellentesque sapien. Mauris magna mi, aliquam quis placerat at, ultrices sed est. Phasellus vehicula luctus justo, non blandit velit aliquam vitae. Vestibulum consequat massa a lobortis volutpat. Integer tortor est, hendrerit eu hendrerit non, feugiat ac augue. Aenean ante neque, dictum et sagittis in, varius dictum est. Praesent scelerisque dictum nunc, rhoncus iaculis augue. Fusce faucibus libero nec lacus interdum placerat.
+
+	  Etiam luctus, velit nec iaculis tincidunt, nisl eros luctus elit, vel tristique turpis ipsum eget risus. Fusce interdum felis a est tristique, eget gravida neque dictum. In a massa ac metus aliquam scelerisque. Nullam non nibh sit amet turpis finibus euismod non vitae nisi. Nulla ac dui consectetur, ullamcorper leo non, tincidunt velit. Duis fringilla ligula tortor, non mollis ligula suscipit sed. Fusce id leo facilisis libero porttitor pellentesque eget et justo. Cras in mi vel ex egestas rutrum.
+
+	  Nulla vestibulum erat ut nunc pulvinar ullamcorper. Etiam finibus, sem vitae commodo laoreet, neque velit sollicitudin felis, id congue nisi libero sed leo. Suspendisse vitae varius ante. Pellentesque vestibulum diam id odio venenatis dapibus. Maecenas faucibus, ante sit amet gravida porta, orci magna pellentesque odio, vel ullamcorper urna odio at ipsum. Praesent ut nibh mattis, pharetra nibh eget, pellentesque arcu. Pellentesque laoreet mi at gravida sagittis.
+
+	  Etiam rhoncus nulla massa, ac posuere libero pellentesque at. Phasellus et massa nunc. Maecenas nunc tellus, scelerisque sed tellus sed, interdum porta est. Vestibulum auctor congue nunc, a venenatis est aliquam sed. Donec eros odio, imperdiet quis vulputate eget, aliquet non libero. Sed ultricies ligula ac augue fringilla, eu vestibulum mi sagittis. Quisque enim dolor, tempor id dignissim suscipit, cursus sit amet tellus.
+	</p>
+
+	<p>
+	  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nunc quam, vehicula sed ex in, laoreet aliquet eros. Sed dignissim neque at magna molestie blandit. Pellentesque non eros eget nisl mattis suscipit eu nec augue. Etiam faucibus dictum blandit. Vivamus et nulla nec turpis iaculis molestie aliquam at erat. Fusce a porta dui. Vivamus leo ex, sodales sit amet arcu a, malesuada congue tortor.
+
+	  Cras nulla leo, aliquam sed tortor eu, sagittis facilisis mauris. Duis nec pellentesque sapien. Mauris magna mi, aliquam quis placerat at, ultrices sed est. Phasellus vehicula luctus justo, non blandit velit aliquam vitae. Vestibulum consequat massa a lobortis volutpat. Integer tortor est, hendrerit eu hendrerit non, feugiat ac augue. Aenean ante neque, dictum et sagittis in, varius dictum est. Praesent scelerisque dictum nunc, rhoncus iaculis augue. Fusce faucibus libero nec lacus interdum placerat.
+
+	  Etiam luctus, velit nec iaculis tincidunt, nisl eros luctus elit, vel tristique turpis ipsum eget risus. Fusce interdum felis a est tristique, eget gravida neque dictum. In a massa ac metus aliquam scelerisque. Nullam non nibh sit amet turpis finibus euismod non vitae nisi. Nulla ac dui consectetur, ullamcorper leo non, tincidunt velit. Duis fringilla ligula tortor, non mollis ligula suscipit sed. Fusce id leo facilisis libero porttitor pellentesque eget et justo. Cras in mi vel ex egestas rutrum.
+
+	  Nulla vestibulum erat ut nunc pulvinar ullamcorper. Etiam finibus, sem vitae commodo laoreet, neque velit sollicitudin felis, id congue nisi libero sed leo. Suspendisse vitae varius ante. Pellentesque vestibulum diam id odio venenatis dapibus. Maecenas faucibus, ante sit amet gravida porta, orci magna pellentesque odio, vel ullamcorper urna odio at ipsum. Praesent ut nibh mattis, pharetra nibh eget, pellentesque arcu. Pellentesque laoreet mi at gravida sagittis.
+
+	  Etiam rhoncus nulla massa, ac posuere libero pellentesque at. Phasellus et massa nunc. Maecenas nunc tellus, scelerisque sed tellus sed, interdum porta est. Vestibulum auctor congue nunc, a venenatis est aliquam sed. Donec eros odio, imperdiet quis vulputate eget, aliquet non libero. Sed ultricies ligula ac augue fringilla, eu vestibulum mi sagittis. Quisque enim dolor, tempor id dignissim suscipit, cursus sit amet tellus.
+	</p>
+
       </div>
     </div>
 
+
     <script type="text/javascript">
 
-      $('[data-toggle="popover"]').popover()
+  
+      $('body').on('activate.bs.scrollspy', function () {
 
+	alert('Hello')
 
-      $('#myModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget)
-        var recipient = button.data('name')
-        var modal = $(this)
-        modal.find('.modal-title').text('New message to ' + recipient)
-        modal.find('.modal-body input').val(recipient)
       })
 
 
     </script>
 
-    <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-placement: "bottom" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
 
   </body>
 
