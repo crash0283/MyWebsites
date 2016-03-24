@@ -1,0 +1,69 @@
+ 
+      #navLogo {
+
+	       height: 60px;
+
+      }
+
+      .navbar {
+	       background-color: rgba(47,139,214,0.4);
+
+      }
+
+      .nav {
+
+	       padding-top: 5px;
+
+      }
+
+
+      #jumboLogo {
+
+	      margin-top: 30px;
+	      display: block;
+	      margin-left: auto;
+	      margin-right: auto;
+
+      }
+
+      .jumbotron {
+
+	      background: url("images/ocean_pier.jpeg") center center;
+	      background-size: cover;
+	      color: #243747;
+        text-align: center;
+
+
+      }
+
+      #moreText {
+
+	      color: #243747;
+
+      }
+
+      #appStoreIcon {
+
+	      width: 200px;
+
+      }
+
+      #playStoreIcon{
+
+	      width: 200px;
+
+      }
+
+      #footer {
+
+	      text-align: center;
+	      background-color: #1EB7F3;
+	      margin: 0;
+	      padding: 30px;
+
+      }
+
+      #jumboLead {
+
+        font-weight: normal;
+      }
