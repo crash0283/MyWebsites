@@ -1,4 +1,4 @@
- 
+
       #navLogo {
 
 	       height: 60px;
@@ -6,7 +6,7 @@
       }
 
       .navbar {
-	       background-color: rgba(47,139,214,0.4);
+	       background-color: rgba(47,139,214,0.9);
 
       }
 
@@ -65,5 +65,16 @@
 
       #jumboLead {
 
-        font-weight: normal;
+        font-weight: bold;
+      }
+
+      #contactText {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .center-block {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
       }

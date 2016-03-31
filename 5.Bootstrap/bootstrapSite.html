@@ -1,83 +1,123 @@
+
+<!doctype>
 <html>
-  <head>
-    <title>Flip Flop Studios</title>
-    <meta content="">
-    <style>
+<head>
+  <title>Flip Flop Studios</title>
+  <meta content="">
+  <style>
 
-    </style>
+  </style>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="flipflop.css">
-  </head>
-  <body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script   src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"   integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="   crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="flipflop.css">
+</head>
+<body>
 
-    <nav class="navbar navbar-fixed-top navbar-dark">
-      <a class="navbar-brand" href="#"><i class="fa fa-home fa-2x"></i></a>
-	    <ul class="nav navbar-nav">
-	      <li class="nav-item active">
-	         <a class="nav-link" href="#">Home</a>
-	      </li>
-	      <li class="nav-item">
-	         <a class="nav-link" href="#">About</a>
-	      </li>
-	      <li class="nav-item">
-	         <a class="nav-link" href="#">Games</a>
-	      </li>
-	      <li class="nav-item">
-	         <a class="nav-link" href="#">Interactive Stories</a>
-	      </li>
-	      <li class="nav-item">
-	         <a class="nav-link" href="#">Contact</a>
-	      </li>
-	    </ul>
-	<form class="form-inline pull-xs-right">
-	  <input class="form-control" type="text" placeholder="Search">
-	  <button class="btn btn-primary" type="submit">Search</button>
-	</form>
-    </nav>
+  <nav class="navbar navbar-fixed-top navbar-dark">
+    <a class="navbar-brand" href="#"><i class="fa fa-home fa-2x"></i></a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Games</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Interactive Stories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-xs-right">
+      <input class="form-control" type="text" placeholder="Search">
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+  </nav>
 
-    <div class="jumbotron jumbotron-fluid">
-      <img class="img-fluid" id="jumboLogo" src="images/flipflop_logo_sm.png">
-      <p class="lead" id="jumboLead">Rad games and excellent stories for mobile</p>
-      <hr class="m-y-2">
-      <p id="moreText">Want to know more...</p>
-      <p class="lead">
-	       <a class="btn btn-primary btn-lg" href="#" role="button">Discover more</a>
-      </p>
-    </div>
+  <div class="jumbotron jumbotron-fluid">
+    <img class="img-fluid" id="jumboLogo" src="images/flipflop_logo_sm.png">
+    <p class="lead" id="jumboLead">Kick back. Relax. Play.</p>
+    <hr class="m-y-2">
+    <p id="moreText">Want to learn more...</p>
+    <p class="lead">
+      <a id="contactButton" class="btn btn-primary btn-lg" href="#contactText" role="button">Contact Us</a>
+    </p>
+  </div>
 
-    <div class="container">
-      <div class="card-deck-wrapper">
-	<div class="card-deck">
-	  <div class="card text-xs-center" style="background-color: rgba(158,235,255,0.5)">
-	    <div class="card-block">
-		<i class="card-img-top fa fa-tablet fa-5x"></i>
-		<h4 class="card-title">Engaging and Educational Stories...</h4>
-		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-		<a href="#" class="btn btn-primary">Latest Stories</a>
-	      </div>
-	    </div>
-	    <div class="card text-xs-center" style="background-color: rgba(158,235,255,0.5)">
-	      <div class="card-block">
-    		<i class="card-img-top fa fa-gamepad fa-5x"></i>
-		<h4 class="card-title">Entertaining Games For All Ages...</h4>
-		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-		<a href="#" class="btn btn-primary">Latest Games</a>
-	      </div>
-	  </div>
-	</div>
+  <div class="container">
+    <div class="card-deck-wrapper">
+      <div class="card-deck">
+        <div class="card text-xs-center" style="background-color: rgba(158,235,255,0.5)">
+          <div class="card-block">
+            <i class="card-img-top fa fa-tablet fa-5x"></i>
+            <h4 class="card-title">Engaging and Educational Stories...</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae pharetra tortor, sit amet eleifend erat. Vestibulum auctor neque ligula, sit amet auctor lacus auctor in. Nunc eu nulla blandit, gravida turpis sed, lacinia metus. Suspendisse volutpat magna sit amet rutrum cursus. Donec enim metus, cursus ac mauris eu, imperdiet vestibulum ligula. Proin leo lorem, ornare at faucibus eu, elementum ut nunc. Sed ac faucibus massa, vel ultricies orci. Vestibulum vitae enim aliquet, tristique mauris vitae, auctor ipsum. Integer vitae condimentum velit. Sed euismod cursus auctor. Donec a metus sit amet quam ullamcorper fringilla id vitae ex. Curabitur consectetur lacinia enim. Integer venenatis nunc ac arcu euismod, sit amet fermentum diam auctor. Pellentesque cursus vestibulum neque, ut tempor odio eleifend in. Vivamus vel viverra risus. Praesent porttitor lectus vel justo sagittis, non auctor enim ullamcorper.</p>
+            <a href="#" class="btn btn-primary">Latest Stories</a>
+          </div>
+        </div>
+        <div class="card text-xs-center" style="background-color: rgba(158,235,255,0.5)">
+          <div class="card-block">
+            <i class="card-img-top fa fa-gamepad fa-5x"></i>
+            <h4 class="card-title">Entertaining Games For All Ages...</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae pharetra tortor, sit amet eleifend erat. Vestibulum auctor neque ligula, sit amet auctor lacus auctor in. Nunc eu nulla blandit, gravida turpis sed, lacinia metus. Suspendisse volutpat magna sit amet rutrum cursus. Donec enim metus, cursus ac mauris eu, imperdiet vestibulum ligula. Proin leo lorem, ornare at faucibus eu, elementum ut nunc. Sed ac faucibus massa, vel ultricies orci. Vestibulum vitae enim aliquet, tristique mauris vitae, auctor ipsum. Integer vitae condimentum velit. Sed euismod cursus auctor. Donec a metus sit amet quam ullamcorper fringilla id vitae ex. Curabitur consectetur lacinia enim. Integer venenatis nunc ac arcu euismod, sit amet fermentum diam auctor. Pellentesque cursus vestibulum neque, ut tempor odio eleifend in. Vivamus vel viverra risus. Praesent porttitor lectus vel justo sagittis, non auctor enim ullamcorper.</p>
+            <a href="#" class="btn btn-primary">Latest Games</a>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 
-    <div id="footer">
-      <div class="row">
-	      <p><a href="#"><img id="appStoreIcon" src="images/ios_app_store_icon.png"></a></p>
-	      <p><a href="#"><img id="playStoreIcon" src="images/play_store_logo.png"></a></p>
-      </div>
+  <div class="container">
+    <div class="row" id="contactText">
+      <h2>Contact Us</h2>
+      <p class="lead">Have an idea? Or just want to ask a couple questions...</p>
     </div>
+  </div>
+  <div class="container">
+    <form>
+      <fieldset class="form-group row">
+        <label for="name" class="col-xs-3 form-control-label">First Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Your name">
+      </fieldset>
+      <fieldset class="form-group row">
+        <label for="email" class="col-xs-3 form-control-label">Email Address</label>
+        <input type="email" class="form-control" id="emailBox" placeholder="Enter email">
+      </fieldset>
+      <fieldset class="form-group row">
+        <label for="textarea" class="col-xs-3 form-control-label">Comments</label>
+        <textarea class="form-control" id="questionArea" rows="3" placeholder="Enter text here..."></textarea>
+      </fieldset>
+      <div class="form-group row">
+        <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+      </div>
+    </form>
+  </div>
 
-  </body>
+
+  <div id="footer">
+    <div class="row">
+      <p><a href="#"><img id="appStoreIcon" src="images/ios_app_store_icon.png"></a></p>
+      <p><a href="#"><img id="playStoreIcon" src="images/play_store_logo.png"></a></p>
+    </div>
+  </div>
+
+  <script>
+    $("#contactButton").click(function() {
+      $("html, body").animate({
+          scrollTop: $("#contactText").offset().top
+       }, 1000, "easeInExpo");
+
+    })
+
+  </script>
+
+</body>
 </html>
